@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE2F734C244B4A0400B0DD39 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2F734B244B4A0400B0DD39 /* Extensions.swift */; };
 		AEDF299024406B3300CADD18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF298F24406B3300CADD18 /* AppDelegate.swift */; };
 		AEDF299224406B3300CADD18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF299124406B3300CADD18 /* SceneDelegate.swift */; };
 		AEDF299424406B3300CADD18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDF299324406B3300CADD18 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		003C6A5893BB56CD2B3845BE /* Pods-NavigationMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationMap.debug.xcconfig"; path = "Target Support Files/Pods-NavigationMap/Pods-NavigationMap.debug.xcconfig"; sourceTree = "<group>"; };
+		482C80B0146008C4A0D9EDE1 /* Pods-NavigationMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationMap.release.xcconfig"; path = "Target Support Files/Pods-NavigationMap/Pods-NavigationMap.release.xcconfig"; sourceTree = "<group>"; };
+		AE2F734B244B4A0400B0DD39 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AEDF298C24406B3300CADD18 /* NavigationMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDF298F24406B3300CADD18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEDF299124406B3300CADD18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,11 +41,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE2F7349244B49DA00B0DD39 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AEDF299324406B3300CADD18 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AE2F734A244B49EC00B0DD39 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE2F734B244B4A0400B0DD39 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AEDF298324406B3300CADD18 = {
 			isa = PBXGroup;
 			children = (
 				AEDF298E24406B3300CADD18 /* NavigationMap */,
 				AEDF298D24406B3300CADD18 /* Products */,
+				EFF864C682F9E7AD436A2799 /* Pods */,
+				EF64BB860BDADB93FE3869A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +80,30 @@
 			children = (
 				AEDF298F24406B3300CADD18 /* AppDelegate.swift */,
 				AEDF299124406B3300CADD18 /* SceneDelegate.swift */,
-				AEDF299324406B3300CADD18 /* ViewController.swift */,
+				AE2F7349244B49DA00B0DD39 /* Controllers */,
+				AE2F734A244B49EC00B0DD39 /* Extensions */,
 				AEDF299524406B3300CADD18 /* Main.storyboard */,
 				AEDF299824406B3900CADD18 /* Assets.xcassets */,
 				AEDF299A24406B3900CADD18 /* LaunchScreen.storyboard */,
 				AEDF299D24406B3900CADD18 /* Info.plist */,
 			);
 			path = NavigationMap;
+			sourceTree = "<group>";
+		};
+		EF64BB860BDADB93FE3869A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFF864C682F9E7AD436A2799 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				003C6A5893BB56CD2B3845BE /* Pods-NavigationMap.debug.xcconfig */,
+				482C80B0146008C4A0D9EDE1 /* Pods-NavigationMap.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEDF29A024406B3900CADD18 /* Build configuration list for PBXNativeTarget "NavigationMap" */;
 			buildPhases = (
+				303E4613A86DD1078EFCD9C5 /* [CP] Check Pods Manifest.lock */,
 				AEDF298824406B3300CADD18 /* Sources */,
 				AEDF298924406B3300CADD18 /* Frameworks */,
 				AEDF298A24406B3300CADD18 /* Resources */,
+				A1279049A80A83FD8B45CBFA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +174,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		303E4613A86DD1078EFCD9C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NavigationMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1279049A80A83FD8B45CBFA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NavigationMap/Pods-NavigationMap-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NavigationMap/Pods-NavigationMap-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NavigationMap/Pods-NavigationMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AEDF298824406B3300CADD18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +224,7 @@
 				AEDF299424406B3300CADD18 /* ViewController.swift in Sources */,
 				AEDF299024406B3300CADD18 /* AppDelegate.swift in Sources */,
 				AEDF299224406B3300CADD18 /* SceneDelegate.swift in Sources */,
+				AE2F734C244B4A0400B0DD39 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +366,7 @@
 		};
 		AEDF29A124406B3900CADD18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 003C6A5893BB56CD2B3845BE /* Pods-NavigationMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +386,7 @@
 		};
 		AEDF29A224406B3900CADD18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 482C80B0146008C4A0D9EDE1 /* Pods-NavigationMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
